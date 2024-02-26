@@ -1,5 +1,5 @@
 # HolzpelletsPreis
-Das Modul ruft den aktuellen Preis pro Tonne ovn Heizpellets24.de ab.
+Das Modul ruft den aktuellen Preis pro Tonne von Heizpellets24.de ab.
     
 ## Inhaltverzeichnis
 - [HolzpelletsPreis](#holzpelletspreis)
