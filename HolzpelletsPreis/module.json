@@ -1,0 +1,14 @@
+{
+    "id": "{5CF42FDA-9E3B-3BA9-64A6-FBC5C349953D}",
+    "name": "HolzpelletsPreis",
+    "type": 3,
+    "vendor": "",
+    "aliases": [
+        "Holzpellets Preis"
+    ],
+    "parentRequirements": [],
+    "childRequirements": [],
+    "implemented": [],
+    "prefix": "HP",
+    "url": "http://deinsmarthome.info"
+}

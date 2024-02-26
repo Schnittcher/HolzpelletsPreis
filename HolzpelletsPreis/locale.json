@@ -1,0 +1,10 @@
+{
+    "translations": {
+        "de": {
+            "Price per ton": "Preis pro Tonne",
+            "Active": "Aktiv",
+            "Update Interval": "Aktualisierungsintervall",
+            "hours": "Stunden"
+        }
+    }
+}
