@@ -2,6 +2,7 @@
     "translations": {
         "de": {
             "Price per ton": "Preis pro Tonne",
+            "Demand": "Nachfrage",
             "Active": "Aktiv",
             "Update Interval": "Aktualisierungsintervall",
             "hours": "Stunden"

@@ -3,15 +3,18 @@
 declare(strict_types=1);
     class HolzpelletsPreis extends IPSModuleStrict
     {
-        private $URL = 'https://www.heizpellets24.de/ChartHandler.ashx';
+        private $URLGER = 'https://www.heizpellets24.de/api/site/1/prices/history';
+        private $URLAT = 'https://www.heizpellets24.at/api/site/2/prices/history';
 
         public function Create(): void
         {
             //Never delete this line!
             parent::Create();
             $this->RegisterPropertyBoolean('Active', false);
+            $this->RegisterPropertyString('Country', 'GER');
             $this->RegisterPropertyInteger('UpdateInterval', 0);
             $this->RegisterVariableFloat('PricePerTon', $this->Translate('Price per ton'), '~Euro', 0);
+            $this->RegisterVariableInteger('Demand', $this->Translate('Demand'), '~Intensity.100', 1);
 
             $this->RegisterTimer('HolzpelletsPreis_Update', 0, 'HP_Update($_IPS[\'TARGET\']);');
         }
@@ -39,42 +42,45 @@ declare(strict_types=1);
 
         public function Update(): void
         {
-            $lastPrice = $this->getLastPrice();
-            if ($lastPrice > 0) {
-                $this->SetValue('PricePerTon', $this->getLastPrice());
+            $lastValue = $this->getLastValue();
+            if ($lastValue != null) {
+                $this->SetValue('PricePerTon', $lastValue['Price']);
+                $this->SetValue('Demand', round($lastValue['Demand'], 2));
             }
         }
 
-        private function getLastPrice(): float
+        private function getLastValue(): array
         {
-            $lastPrice = 0;
+            $lastValue = null;
             $result = json_decode($this->getPrices(), true);
             if (count($result) > 0) {
-                $lastPrice = end($result)['value'];
+                $lastValue = end($result);
             }
-            return $lastPrice;
+            return $lastValue;
         }
 
         private function getPrices(): string
         {
-            $postdata = http_build_query(
-                [
-                    'ProductId'    => '1',
-                    'CountryId'    => '1',
-                    'chartMode'    => '3',
-                    'defaultRange' => 'true'
-                ]
-            );
+            switch ($this->ReadPropertyString('Country')) {
+                case 'GER':
+                    $URL = $this->URLGER;
+                    break;
+                case 'AT':
+                    $URL = $this->URLAT;
+                    break;
+                default:
+                    return '';
+
+            }
             $opts = [
                 'http' => [
-                    'method'        => 'POST',
-                    'header'        => 'Content-Type: application/x-www-form-urlencoded; charset=UTF-8\r\n',
-                    'content'       => $postdata,
+                    'method'        => 'GET',
+                    'header'        => 'Content-Type: application/json'
                 ],
             ];
 
             $context = stream_context_create($opts);
-            $result = file_get_contents($this->URL, false, $context);
+            $result = file_get_contents($URL, false, $context);
             if ((strpos($http_response_header[0], '200') !== false)) {
                 return $result;
             }

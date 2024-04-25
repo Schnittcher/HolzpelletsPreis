@@ -1,6 +1,21 @@
 {
     "elements": [
         {
+            "type": "Select",
+            "name": "Country",
+            "caption": "Country",
+            "options": [
+                {
+                    "caption": "Germany",
+                    "value": "GER"
+                },
+                {
+                    "caption": "Austria",
+                    "value": "AT"
+                }
+            ]
+        },
+        {
             "type": "CheckBox",
             "name": "Active",
             "caption": "Active"
