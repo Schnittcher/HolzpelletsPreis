@@ -10,6 +10,7 @@ Die Bibliothek ruft den aktuellen Preis für Holzpellets von Heizpellets24 (Deut
 ## Inhaltsverzeichnis
 - [HolzpelletsPreis](#holzpelletspreis)
   - [Inhaltsverzeichnis](#inhaltsverzeichnis)
+  - [Screenshots](#screenshots)
   - [1. Voraussetzungen](#1-voraussetzungen)
   - [2. Funktionsumfang](#2-funktionsumfang)
   - [3. Enthaltene Module](#3-enthaltene-module)
@@ -17,6 +18,10 @@ Die Bibliothek ruft den aktuellen Preis für Holzpellets von Heizpellets24 (Deut
   - [5. Konfiguration in IP-Symcon](#5-konfiguration-in-ip-symcon)
   - [6. Spenden](#6-spenden)
   - [7. Lizenz](#7-lizenz)
+
+## Screenshots
+
+![Kachel mit Preis, Trend und Verlauf](docs/screenshots/kachel.png)
 
 ## 1. Voraussetzungen
 

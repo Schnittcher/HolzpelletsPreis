@@ -137,6 +137,12 @@ class HolzpelletsPreis extends IPSModuleStrict
         return $html . '<script>handleMessage(' . json_encode(json_encode($this->getTileData())) . ');</script>';
     }
 
+    // Die Symcon-Stubs fragen die Zeit für Timer über diese Methode ab, im Kernel wird sie nicht benötigt.
+    protected function getTime(): int
+    {
+        return time();
+    }
+
     /**
      * Version 2.0: Legacy-Profile (~Euro, ~Intensity.100) werden einmalig durch Darstellungen ersetzt.
      * Nur Variablen, die noch ein Profil tragen, werden angefasst; Anpassungen des Nutzers bleiben.
