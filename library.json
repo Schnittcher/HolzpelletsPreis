@@ -4,9 +4,9 @@
     "author": "Kai Schnittcher",
     "url": "http://deinsmarthome.info",
     "compatibility": {
-        "version": "7.0"
+        "version": "9.0"
     },
-    "version": "1.0",
+    "version": "2.0",
     "build": 0,
     "date": 0
 }

@@ -21,24 +21,53 @@
             "caption": "Active"
         },
         {
-            "type": "Label",
-            "caption": "Update Interval"
-        },
-        {
             "type": "NumberSpinner",
             "name": "UpdateInterval",
             "caption": "Update Interval",
             "suffix": "hours"
+        },
+        {
+            "type": "CheckBox",
+            "name": "UseArchive",
+            "caption": "Log price in archive and show it in the tile"
+        },
+        {
+            "type": "Select",
+            "name": "ChartDays",
+            "caption": "Chart period",
+            "options": [
+                {
+                    "caption": "30 days",
+                    "value": 30
+                },
+                {
+                    "caption": "90 days",
+                    "value": 90
+                },
+                {
+                    "caption": "180 days",
+                    "value": 180
+                },
+                {
+                    "caption": "365 days",
+                    "value": 365
+                }
+            ]
         }
     ],
     "actions": [
         {
-            "type": "Label",
-            "caption": "Spenden / Schenkung"
+            "type": "Button",
+            "caption": "Import price history",
+            "onClick": "echo HP_ImportHistory($id);"
         },
         {
             "type": "Label",
-            "caption": "Dieses Modul ist für die nicht kommerzielle Nutzung kostenlos, Schenkungen als Unterstützung für den Autor werden hier akzeptiert:    "
+            "caption": "Donations"
+        },
+        {
+            "type": "Label",
+            "caption": "This module is free for non-commercial use. Donations to support the author are accepted here:    "
         },
         {
             "type": "RowLayout",
@@ -60,5 +89,26 @@
             ]
         }
     ],
-    "status": []
+    "status": [
+        {
+            "code": 102,
+            "icon": "active",
+            "caption": "Instance is active"
+        },
+        {
+            "code": 104,
+            "icon": "inactive",
+            "caption": "Instance is inactive"
+        },
+        {
+            "code": 201,
+            "icon": "error",
+            "caption": "Invalid country"
+        },
+        {
+            "code": 202,
+            "icon": "error",
+            "caption": "Price data could not be retrieved"
+        }
+    ]
 }

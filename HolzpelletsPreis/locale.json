@@ -3,9 +3,32 @@
         "de": {
             "Price per ton": "Preis pro Tonne",
             "Demand": "Nachfrage",
+            "Country": "Land",
+            "Germany": "Deutschland",
+            "Austria": "Österreich",
             "Active": "Aktiv",
             "Update Interval": "Aktualisierungsintervall",
-            "hours": "Stunden"
+            "hours": "Stunden",
+            "Instance is active": "Instanz ist aktiv",
+            "Instance is inactive": "Instanz ist inaktiv",
+            "Invalid country": "Ungültiges Land",
+            "Price data could not be retrieved": "Preisdaten konnten nicht abgerufen werden",
+            "vs. yesterday": "zum Vortag",
+            "vs. last week": "zur Vorwoche",
+            "Low": "Tief",
+            "High": "Hoch",
+            "Price in the last %d days": "Preis der letzten %d Tage",
+            "No price data yet": "Noch keine Preisdaten",
+            "Log price in archive and show it in the tile": "Preis im Archiv loggen und in der Kachel anzeigen",
+            "Chart period": "Zeitraum des Diagramms",
+            "30 days": "30 Tage",
+            "90 days": "90 Tage",
+            "180 days": "180 Tage",
+            "365 days": "365 Tage",
+            "Import price history": "Preisverlauf importieren",
+            "Logging of the price is not active. Enable the archive option and apply the changes first.": "Das Loggen des Preises ist nicht aktiv. Zuerst die Archiv-Option aktivieren und die Änderungen übernehmen.",
+            "Donations": "Spenden / Schenkung",
+            "This module is free for non-commercial use. Donations to support the author are accepted here:    ": "Dieses Modul ist für die nicht kommerzielle Nutzung kostenlos, Schenkungen als Unterstützung für den Autor werden hier akzeptiert:    "
         }
     }
 }

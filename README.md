@@ -1,43 +1,53 @@
 [![Version](https://img.shields.io/badge/Symcon-PHPModul-red.svg)](https://www.symcon.de/service/dokumentation/entwicklerbereich/sdk-tools/sdk-php/)
-[![Check Style](https://github.com/Schnittcher/HolzpelletsPreis/workflows/Check%20Style/badge.svg)](https://github.com/Schnittcher/IPS-PhilipsHUE/actions)
-![Version](https://img.shields.io/badge/Symcon%20Version-7.0%20%3E-blue.svg)
+![Version](https://img.shields.io/badge/Symcon%20Version-9.0%20%3E-blue.svg)
 [![License](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-green.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+[![Check Style](https://github.com/Schnittcher/HolzpelletsPreis/actions/workflows/style.yml/badge.svg)](https://github.com/Schnittcher/HolzpelletsPreis/actions/workflows/style.yml)
+[![Tests](https://github.com/Schnittcher/HolzpelletsPreis/actions/workflows/tests.yml/badge.svg)](https://github.com/Schnittcher/HolzpelletsPreis/actions/workflows/tests.yml)
 
 # HolzpelletsPreis
-   Folgende Module beinhaltet das HolzpelletsPreis Repository:
- 
-   ## Inhaltverzeichnis
+Die Bibliothek ruft den aktuellen Preis für Holzpellets von Heizpellets24 (Deutschland und Österreich) ab.
+
+## Inhaltsverzeichnis
 - [HolzpelletsPreis](#holzpelletspreis)
-	- [Inhaltverzeichnis](#inhaltverzeichnis)
-	- [1. Voraussetzungen](#1-voraussetzungen)
-	- [2. Enthaltene Module](#2-enthaltene-module)
-	- [3. Installation](#3-installation)
-	- [4. Konfiguration in IP-Symcon](#4-konfiguration-in-ip-symcon)
-	- [5. Spenden](#5-spenden)
-	- [6. Lizenz](#6-lizenz)
-   
+  - [Inhaltsverzeichnis](#inhaltsverzeichnis)
+  - [1. Voraussetzungen](#1-voraussetzungen)
+  - [2. Funktionsumfang](#2-funktionsumfang)
+  - [3. Enthaltene Module](#3-enthaltene-module)
+  - [4. Installation](#4-installation)
+  - [5. Konfiguration in IP-Symcon](#5-konfiguration-in-ip-symcon)
+  - [6. Spenden](#6-spenden)
+  - [7. Lizenz](#7-lizenz)
+
 ## 1. Voraussetzungen
 
-* mindestens IPS Version 7.0
+* mindestens IPS Version 9.0
+* Internetzugang für den Abruf von heizpellets24.de bzw. heizpellets24.at
 
+## 2. Funktionsumfang
+* Abruf des aktuellen Pelletpreises pro Tonne und der Nachfrage
+* Wahl zwischen Deutschland und Österreich
+* Automatische Aktualisierung im einstellbaren Intervall
+* Kachel für die Kachel-Visualisierung mit Preisverlauf, wahlweise aus dem eigenen Archiv
 
-## 2. Enthaltene Module
+Die einzelnen Funktionen stehen bei den Instanzen unter "Enthaltene Module" und in der README des jeweiligen Moduls.
 
-- __HolzpelletsPreis__ ([Dokumentation](HolzpelletsPreis))  
-	Das Modul ruft den aktuellen Preis pro Tonne ovn Heizpellets24.de ab.
+## 3. Enthaltene Module
 
-## 3. Installation
-Über den IP-Symcon Module Store.
+* [HolzpelletsPreis](HolzpelletsPreis/README.md)
+  * Ruft den aktuellen Preis pro Tonne und die Nachfrage von Heizpellets24 ab.
+  * Bringt eine Kachel mit Preisverlauf und Trend mit.
 
-## 4. Konfiguration in IP-Symcon
-Die Doku in den einzelnen Instanzen zu entnehmen.
+## 4. Installation
+Die Installation erfolgt über den IP-Symcon Module Store.
 
-## 5. Spenden
+## 5. Konfiguration in IP-Symcon
+Eine Instanz "HolzpelletsPreis" anlegen, Land und Aktualisierungsintervall wählen und die Instanz aktivieren. Die Einzelheiten stehen in der README des Moduls.
 
-Dieses Modul ist für die nicht kommerzielle Nutzung kostenlos, Schenkungen als Unterstützung für den Autor werden hier akzeptiert:    
+## 6. Spenden
+Dieses Modul ist für die nicht kommerzielle Nutzung kostenlos, Schenkungen als Unterstützung für den Autor werden hier akzeptiert:
 
-<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=EK4JRP87XLSHW" target="_blank"><img src="https://www.paypalobjects.com/de_DE/DE/i/btn/btn_donate_LG.gif" border="0" /></a> <a href="https://www.amazon.de/hz/wishlist/ls/3JVWED9SZMDPK?ref_=wl_share" target="_blank">Amazon Wunschzettel</a>
+[![PayPal](https://img.shields.io/badge/PayPal-Spenden-00457C?logo=paypal&logoColor=white&style=for-the-badge)](https://www.paypal.com/donate?hosted_button_id=EK4JRP87XLSHW) [![Amazon Wunschzettel](https://img.shields.io/badge/Amazon-Wunschzettel-FF9900?logo=amazon&logoColor=white&style=for-the-badge)](https://www.amazon.de/hz/wishlist/ls/3JVWED9SZMDPK?ref_=wl_share)
 
-## 6. Lizenz
+## 7. Lizenz
 
 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
