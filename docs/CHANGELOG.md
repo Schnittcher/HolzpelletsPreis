@@ -17,3 +17,4 @@
 - Beim Systemstart wird erst abgerufen, wenn der Kernel bereit ist.
 - Die Nachfrage wird sauber auf ganze Prozent gerundet.
 - Das Formular zeigt die Beschriftung "Aktualisierungsintervall" nicht mehr doppelt.
+- Der Dokumentationslink der Instanzen führt jetzt zur Dokumentation auf deinsmarthome.info.
